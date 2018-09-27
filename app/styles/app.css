@@ -15,15 +15,15 @@ div.priority{
 }
 
 div.priority.high{
-    background: lightpink;
+    background: #FFB7B8;
 }
 
 div.priority.mid{
-    background: lightyellow;
+    background: #F6DFAB;
 }
 
 div.priority.low{
-    background: lightcyan;
+    background: #C3E0E3;
 }
 
 div.discipline{
