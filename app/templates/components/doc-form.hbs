@@ -1,0 +1,12 @@
+{{yield}}
+
+<h4>Проверить номер документа</h4>
+<input type="text" name="doc_input" maxlength="12" placeholder="Номер документа">
+
+<button type="submit" name="document">Проверить</button>
+
+<div class="val_result"></div>
+
+{{#each model as |document|}}
+{{doc-unit doc=document}}
+{{/each}}
