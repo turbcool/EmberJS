@@ -1,0 +1,54 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    user-select: none;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+div.priority{
+    width: 33%;
+    height: 200px;
+    float: left;
+    border-radius: 5px;
+}
+
+div.priority.high{
+    background: lightpink;
+}
+
+div.priority.mid{
+    background: lightyellow;
+}
+
+div.priority.low{
+    background: lightcyan;
+}
+
+div.discipline{
+    background: azure;
+    margin:10px;
+    padding:5px;
+    border-radius: 5px;
+    float: left;
+}
+
+.links{
+    background-color: #B0CFE5;
+    font-size: 20px; 
+    line-height: 25px;
+    border-radius: 4px;
+    padding: 12px;
+    text-align: center;
+}
+
+.links a{
+    color: #0F212E;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.links a:hover{
+    color: white;
+}
