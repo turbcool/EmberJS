@@ -1,8 +1,9 @@
 import Route from '@ember/routing/route';
 
 export default Route.extend({
+
 	model() {
-    this.store.unloadAll();
+    //this.store.unloadAll();
 
     this.store.createRecord('document',{
       numb:'AAAAAA000-AA',
@@ -32,12 +33,12 @@ export default Route.extend({
       company:'Dom.RU',
       university:'НИУ ВШЭ Пермь'
     });
-    
-    this.store.query('document',{
+
+    var ok = this.store.query('document',{
       filter: {
         numb:'AAAAAA000-AA'
       }
-    });
+    }); //test
 
     return this.store.findAll('document');
   }

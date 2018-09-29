@@ -1,13 +1,13 @@
 {{yield}}
 
 <h4>Проверить номер документа</h4>
-<form {{action "sendNumber" doc_number on="submit"}}>
+<form {{action "validateNumber" doc_number on="submit"}}>
   {{input 
+    value=doc_number
     type="text" 
     name="doc_input" 
     maxlength="12" 
     placeholder="Номер документа"
-    value=doc_number
   }}
   <button type="submit" name="document">Проверить</button>
 </form>
@@ -21,5 +21,7 @@
 </div>
 
 {{#each model as |document|}}
-  {{doc-unit doc=document}}
+  {{#doc-unit doc=document}}
+
+  {{/doc-unit}}
 {{/each}}

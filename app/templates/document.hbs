@@ -1,5 +1,22 @@
 {{outlet}}
 
+{{input 
+  value=number
+  type="text" 
+  name="doc_input" 
+  maxlength="12" 
+  placeholder="Номер документа"
+}}
+
+<button {{action "getDocument" number}} 
+  type="submit" 
+  name="document"
+>
+  Проверить
+</button>
+
+{{test}}
+
 {{#doc-form model=model}}
 
 {{/doc-form}}
