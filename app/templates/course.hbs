@@ -2,26 +2,26 @@
 
 <h1>Страница выбора образовательных программ</h1>
 
-    <hr>
-    <h2>Семестр 1:</h2>
+<hr>
+<h2>Семестр 1:</h2>
 
-    <div class="seminar" id="sem1">
-        <div class="priority high" id="main_container">
-        </div>
-        <div class="priority mid" ></div>
-        <div class="priority low"></div>
-    </div>
+<div class="seminar" id="sem1">
+  <div class="priority high" id="main_container">
+  </div>
+  <div class="priority mid" ></div>
+  <div class="priority low"></div>
+</div>
 
-    <h2>Семестр 2:</h2>
+<h2>Семестр 2:</h2>
 
-    <div class="seminar" id="sem2">
-        <div class="priority high"></div>
-        <div class="priority mid"></div>
-        <div class="priority low"></div>
-    </div>
+<div class="seminar" id="sem2">
+  <div class="priority high"></div>
+  <div class="priority mid"></div>
+  <div class="priority low"></div>
+</div>
 
-    <div id="init"></div>
+<div id="init"></div>
 
-    {{#each model as |discipline|}}
-        <div class="discipline">{{discipline}}</div>
-    {{/each}}
+{{#each model as |discipline|}}
+  <div class="discipline">{{discipline}}</div>
+{{/each}}

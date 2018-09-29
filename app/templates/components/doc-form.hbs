@@ -1,15 +1,24 @@
 {{yield}}
 
 <h4>Проверить номер документа</h4>
-<input 
-  type="text" 
-  name="doc_input" 
-  maxlength="12" 
-  placeholder="Номер документа"
->
-<button type="submit" name="document">Проверить</button>
+<form {{action "sendNumber" doc_number on="submit"}}>
+  {{input 
+    type="text" 
+    name="doc_input" 
+    maxlength="12" 
+    placeholder="Номер документа"
+    value=doc_number
+  }}
+  <button type="submit" name="document">Проверить</button>
+</form>
 
-<div class="val_result"></div>
+<div class="val_result">
+  {{val_result}}
+</div>
+
+<div>
+  
+</div>
 
 {{#each model as |document|}}
   {{doc-unit doc=document}}
