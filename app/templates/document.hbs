@@ -10,8 +10,14 @@
 
 {{/doc-form}}
 
-{{#each model as |document|}}
-  {{#doc-unit doc=document}}
+{{error_text}}
 
-  {{/doc-unit}}
-{{/each}}
+<br><button {{action "showAll"}}>Показать все</button>
+
+{{#if show_all}}
+  {{#each model as |document|}}
+    {{#doc-unit doc=document}}
+
+    {{/doc-unit}}
+  {{/each}}
+{{/if}}
