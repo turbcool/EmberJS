@@ -51,11 +51,6 @@ export default Controller.extend({
       var peekId = this.store.peekRecord('document', id);
 
       this.set('currentObj', peekId);
-    },
-
-    getNumber(number){
-      this._super(...arguments); //Выполнится родительский/дочерний action
-      this.getDocument(this.get('docNumber'));
     }
   }
 });

@@ -1,28 +1,11 @@
 {{outlet}}
 
-<br>
-{{input
-  value=number
-  type="text"
-  name="doc_input"
-  maxlength="12"
-  placeholder="Номер документа"
-}}
-
-<button {{action "getDocument" number}}
-  type="submit"
-  name="document"
->
-  Проверить
-</button>
-
 {{#doc-unit doc=currentObj}}
 
 {{/doc-unit}}
 
 {{#doc-form
-  validateNumber=(action "getNumber")
-  doc_input=docNumber
+  valid_action=(action "getDocument")
 }}
 
 {{/doc-form}}
