@@ -3,7 +3,6 @@ import Component from '@ember/component';
 export default Component.extend({
   val_result: null,
   doc_input: null,
-  valid_number: null,
   valid_action: null,
   actions: {
     validateNumber(doc_input) {
@@ -14,14 +13,11 @@ export default Component.extend({
 
         var docform_action = this.get('valid_action');
         if (docform_action)
-        {
           docform_action(doc_input);
-        }
       }
       else
       {
         this.set('val_result','Номер документа введён неверно');
-        this.set('valid_number', null);
       }
     }
   }

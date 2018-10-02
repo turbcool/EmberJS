@@ -2,7 +2,7 @@ import Controller from '@ember/controller';
 
 export default Controller.extend({
   docNumber: null,
-  currentObj: null,
+  doc_unit_result: null,
   actions: {
     generateRecords(){
       this.store.unloadAll();
@@ -50,7 +50,7 @@ export default Controller.extend({
 
       var peekId = this.store.peekRecord('document', id);
 
-      this.set('currentObj', peekId);
+      this.set('doc_unit_result', peekId);
     }
   }
 });
