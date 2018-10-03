@@ -1,6 +1,6 @@
 {{yield}}
 
-<h4>Проверить номер документа</h4>
+<h4>{{title}}</h4>
 <form {{action "validateNumber" doc_input on="submit"}}>
   {{input
     value=doc_input
@@ -9,7 +9,7 @@
     maxlength="12"
     placeholder="Номер документа"
   }}
-  <button type="submit" name="document">Проверить</button>
+  <button type="submit" name="document">{{but_text}}</button>
 </form>
 
 <div class="val_result">

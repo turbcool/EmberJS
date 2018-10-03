@@ -49,8 +49,8 @@ export default Controller.extend({
       array.forEach(function(item, i, array){
         if (item.numb==number)
           id=i;
+        array.toArray();
       });
-
       //Peek id если он был найден:
       if (id==-1){
         this.set('doc_unit_result', null);

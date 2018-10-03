@@ -7,7 +7,11 @@ export default Component.extend({
   actions: {
     validateNumber(doc_input) {
       //AAAAAA000-AA
-      if (doc_input.match('[A-Z]{6}[0-9]{3}-[A-Z]{2}'))
+      if (doc_input==null)
+      {
+        this.set('val_result', 'Номер документа не введён');
+      }
+      else if (doc_input.match('[A-Z]{6}[0-9]{3}-[A-Z]{2}') && doc_input.length<=12 )
       {
         this.set('val_result','');
 

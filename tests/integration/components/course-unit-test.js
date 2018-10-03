@@ -3,26 +3,24 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-module('Integration | Component | doc-unit', function(hooks) {
+module('Integration | Component | course-unit', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`{{doc-unit}}`);
+    await render(hbs`{{course-unit}}`);
 
-    //assert.equal(this.element.textContent.trim(), '');
+    assert.equal(this.element.textContent.trim(), '');
 
     // Template block usage:
     await render(hbs`
-      {{#doc-unit}}
+      {{#course-unit}}
         template block text
-      {{/doc-unit}}
+      {{/course-unit}}
     `);
 
-    //assert.equal(this.element.textContent.trim(), 'template block text');
-
-    assert.ok(true,'ok');
+    assert.equal(this.element.textContent.trim(), 'template block text');
   });
 });
