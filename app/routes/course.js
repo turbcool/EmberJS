@@ -2,34 +2,44 @@ import Route from '@ember/routing/route';
 
 export default Route.extend({
   model() {
-    return [
-      {
-        name:'Теоретические основы информатики',
-        description:'Описание'
-      },
-      {
-        name:'Дискретная математика',
-        description:'Описание'
-      },
-      {
-        name:'Экономика',
-        description:'Описание'
-      },
-      {
-        name:'Эконометрика',
-        description:'Описание'
-      },
-      {
-        name:'Теория игр',
-        description:'Описание'
-      },
-      {
-        name:'История',
-        description:'Описание'
-      },
-      {
-        name:'Менеджмент',
-        description:'Описание'
-      }];
+    this.store.unloadAll();
+
+    this.store.createRecord('course',{
+      id:0,
+      name:'ТОИ',
+      description:'Описание'
+    });
+    this.store.createRecord('course',{
+      id:1,
+      name:'Дискретная математика',
+      description:'Описание'
+    });
+    this.store.createRecord('course',{
+      id:2,
+      name:'Экономика',
+      description:'Описание'
+    });
+    this.store.createRecord('course',{
+      id:3,
+      name:'Эконометрика',
+      description:'Описание'
+    });
+    this.store.createRecord('course',{
+      id:4,
+      name:'Теория игр',
+      description:'Описание'
+    });
+    this.store.createRecord('course',{
+      id:5,
+      name:'История',
+      description:'Описание'
+    });
+    this.store.createRecord('course',{
+      id:6,
+      name:'Менеджмент',
+      description:'Описание'
+    });
+
+    return this.store.findAll('course');
   }
 });

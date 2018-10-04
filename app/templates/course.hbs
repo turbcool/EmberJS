@@ -3,22 +3,26 @@
 <h1>Страница выбора образовательных программ</h1>
 
 <hr>
+
+<div class="flex">
+  {{#each model as |course|}}
+    {{course-unit course=course}}
+  {{/each}}
+</div>
+
+<hr>
 <h2>Семестр 1:</h2>
 
 <div class="seminar" id="sem1">
-  {{priority-zone classNames="high"}}
-  {{priority-zone classNames="mid"}}
-  {{priority-zone classNames="low"}}
+  {{priority-zone classNames="high" course_list=c1p1}}
+  {{priority-zone classNames="mid"  course_list=c1p2}}
+  {{priority-zone classNames="low"  course_list=c1p3}}
 </div>
 
 <h2>Семестр 2:</h2>
 
 <div class="seminar" id="sem2">
-  {{priority-zone classNames="high"}}
-  {{priority-zone classNames="mid"}}
-  {{priority-zone classNames="low"}}
+  {{priority-zone classNames="high" course_list=c2p1}}
+  {{priority-zone classNames="mid"  course_list=c2p2}}
+  {{priority-zone classNames="low"  course_list=c2p3}}
 </div>
-
-{{#each model as |course|}}
-  {{course-unit course=course}}
-{{/each}}

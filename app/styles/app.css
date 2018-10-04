@@ -8,9 +8,9 @@ h1, h2{
 }
 
 div.priority{
-    width: 33%;
+    width: 32%;
     height: 200px;
-    float: left;
+    display: inline-block;
     border-radius: 5px;
 }
 
@@ -27,11 +27,17 @@ div.priority.low{
 }
 
 div.discipline{
-    background: azure;
-    margin:10px;
+    background: rgb(211, 237, 248);
+    margin:5px;
     padding:5px;
     border-radius: 5px;
-    float: left;
+    display: inline-block;
+}
+
+div.flex{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
 }
 
 .links{
@@ -65,4 +71,8 @@ th, td {
 
 .error{
   padding: 5px 0 0 0;
+}
+
+button, input{
+    padding: 5px;
 }
