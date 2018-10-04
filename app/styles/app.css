@@ -36,7 +36,7 @@ div.discipline{
 
 .links{
     background-color: #B0CFE5;
-    font-size: 20px; 
+    font-size: 20px;
     line-height: 25px;
     border-radius: 4px;
     padding: 12px;
@@ -46,7 +46,7 @@ div.discipline{
 .links a{
     color: #0F212E;
     text-decoration: none;
-    margin: 10px;
+    padding: 10px;
 }
 
 .links a:hover{
@@ -56,10 +56,13 @@ div.discipline{
 table{
     text-align: left;
     width:380px;
+    box-shadow: 0 0 2px 0;
 }
 
-table td{
-    width: 200px;
-    border:1px solid;
-    border-collapse: collapse;
+th, td {
+  border-bottom: 1px solid #ddd;
+}
+
+.error{
+  padding: 5px 0 0 0;
 }

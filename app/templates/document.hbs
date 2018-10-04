@@ -12,9 +12,18 @@
 
 {{/doc-form}}
 
-{{error_text}}
+<div class="error">
+  {{error_text}}
+</div>
 
-<br><button {{action "showAll"}}>Показать все</button>
+<br>
+<button {{action "showAllTrigger"}}>
+  {{#if show_all}}
+    Скрыть
+  {{else}}
+    Показать все
+  {{/if}}
+</button>
 
 {{#if show_all}}
   {{#each model as |document|}}
