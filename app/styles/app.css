@@ -7,11 +7,16 @@ h1, h2{
     text-align: center;
 }
 
+div.seminar{
+    display: block;
+    overflow: hidden;
+  }
+
 div.priority{
-    width: 32%;
     height: 200px;
-    display: inline-block;
+    width:33%;
     border-radius: 5px;
+    float:left;
 }
 
 div.priority.high{
@@ -31,13 +36,7 @@ div.discipline{
     margin:5px;
     padding:5px;
     border-radius: 5px;
-    display: inline-block;
-}
-
-div.flex{
-  display: flex;
-  flex-wrap:wrap;
-  justify-content: center;
+    text-align: center;
 }
 
 .links{

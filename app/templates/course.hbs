@@ -11,27 +11,30 @@
 
 {{/sortable-objects}}
 
-Test:
-{{#each course_list as |course|}}
-  {{course-unit course=course}}
-{{/each}}
 <hr>
 <h2>Семестр 1:</h2>
 
 <div class="seminar" id="sem1">
-  {{#draggable-object-target action=(action "addToList") content=item}}
-    {{priority-zone classNames="high"}}
-    {{priority-zone classNames="mid"}}
-    {{priority-zone classNames="low"}}
+  {{#draggable-object-target action=(action "S1_P1")}}
+    {{priority-zone classNames="high" course_list=S1_P1}}
+  {{/draggable-object-target}}
+  {{#draggable-object-target action=(action "S1_P2")}}  
+    {{priority-zone classNames="mid"  course_list=S1_P2}}
+  {{/draggable-object-target}}
+  {{#draggable-object-target action=(action "S1_P3")}}
+    {{priority-zone classNames="low"  course_list=S1_P3}}
   {{/draggable-object-target}}
 </div>
-
 <h2>Семестр 2:</h2>
 
 <div class="seminar" id="sem2">
-  {{#draggable-object-target}}
-    {{priority-zone classNames="high"}}
-    {{priority-zone classNames="mid"}}
-    {{priority-zone classNames="low"}}
+  {{#draggable-object-target action=(action "S2_P1")}}
+    {{priority-zone classNames="high" course_list=S2_P1}}
+  {{/draggable-object-target}}
+  {{#draggable-object-target action=(action "S2_P2")}}  
+    {{priority-zone classNames="mid"  course_list=S2_P2}}
+  {{/draggable-object-target}}
+  {{#draggable-object-target action=(action "S2_P3")}}
+    {{priority-zone classNames="low"  course_list=S2_P3}}
   {{/draggable-object-target}}
 </div>
