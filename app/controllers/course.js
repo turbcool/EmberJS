@@ -6,8 +6,7 @@ export default Controller.extend({
     addToList(dragged, target){
       this.get('model').removeObject(dragged);
       this.get('course_list').pushObject(dragged);
-      target.target.set('test_array', [{name: "hello"}]);
-      target.target.get('test_array').pushObject({name:"hello"});
+      //target.target.set('test_array', [{name: "hello"}]);
     }
   }
 });

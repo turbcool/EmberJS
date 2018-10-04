@@ -1,5 +1,7 @@
 {{yield}}
 
-<div class="discipline">
-  {{course.name}}
-</div>
+{{#draggable-object content=course isSortable="true" sortingScope="Main_list"}}
+  <div class="discipline">
+    {{course.name}}
+  </div>
+{{/draggable-object}}

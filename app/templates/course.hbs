@@ -6,18 +6,14 @@
 {{#sortable-objects sortableObjectList=model sortingScope="Main_list"}}
 
   {{#each model as |course|}}
-    {{#draggable-object content=course isSortable="true" sortingScope="Main_list"}}
-      {{course-unit course=course}}
-    {{/draggable-object}}
+    {{course-unit course=course}}
   {{/each}}
 
 {{/sortable-objects}}
 
 Test:
 {{#each course_list as |course|}}
-  {{#draggable-object content=course isSortable="true" sortingScope="Main_list"}}
-    {{course-unit course=course}}
-  {{/draggable-object}}
+  {{course-unit course=course}}
 {{/each}}
 <hr>
 <h2>Семестр 1:</h2>
