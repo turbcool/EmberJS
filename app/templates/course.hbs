@@ -3,26 +3,39 @@
 <h1>Страница выбора образовательных программ</h1>
 
 <hr>
+{{#sortable-objects sortableObjectList=model sortingScope="Main_list"}}
 
-<div class="flex">
   {{#each model as |course|}}
-    {{course-unit course=course}}
+    {{#draggable-object content=course isSortable="true" sortingScope="Main_list"}}
+      {{course-unit course=course}}
+    {{/draggable-object}}
   {{/each}}
-</div>
 
+{{/sortable-objects}}
+
+Test:
+{{#each course_list as |course|}}
+  {{#draggable-object content=course isSortable="true" sortingScope="Main_list"}}
+    {{course-unit course=course}}
+  {{/draggable-object}}
+{{/each}}
 <hr>
 <h2>Семестр 1:</h2>
 
 <div class="seminar" id="sem1">
-  {{priority-zone classNames="high" course_list=c1p1}}
-  {{priority-zone classNames="mid"  course_list=c1p2}}
-  {{priority-zone classNames="low"  course_list=c1p3}}
+  {{#draggable-object-target action=(action "addToList") content=item}}
+    {{priority-zone classNames="high"}}
+    {{priority-zone classNames="mid"}}
+    {{priority-zone classNames="low"}}
+  {{/draggable-object-target}}
 </div>
 
 <h2>Семестр 2:</h2>
 
 <div class="seminar" id="sem2">
-  {{priority-zone classNames="high" course_list=c2p1}}
-  {{priority-zone classNames="mid"  course_list=c2p2}}
-  {{priority-zone classNames="low"  course_list=c2p3}}
+  {{#draggable-object-target}}
+    {{priority-zone classNames="high"}}
+    {{priority-zone classNames="mid"}}
+    {{priority-zone classNames="low"}}
+  {{/draggable-object-target}}
 </div>
