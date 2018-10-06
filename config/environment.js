@@ -44,7 +44,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.baseURL = '/project-name';
+    ENV.baseURL = 'https://turbcool.github.io/EmberJS';
     ENV.locationType = 'hash';
   }
 
