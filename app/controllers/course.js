@@ -10,8 +10,6 @@ export default Controller.extend({
   S2_P2:[],
   S2_P3:[],
   actions:{
-    addToList(dragged, target){
-    },
     S1_P1(dragged,target){
       this.get('model').removeObject(dragged);
       this.get('S1_P1').pushObject(dragged);
