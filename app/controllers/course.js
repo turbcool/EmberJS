@@ -10,29 +10,19 @@ export default Controller.extend({
   S2_P2:[],
   S2_P3:[],
   actions:{
-    S1_P1(dragged,target){
-      this.get('model').removeObject(dragged);
-      this.get('S1_P1').pushObject(dragged);
-    },
-    S1_P2(dragged,target){
-      this.get('model').removeObject(dragged);
-      this.get('S1_P2').pushObject(dragged);
-    },
-    S1_P3(dragged,target){
-      this.get('model').removeObject(dragged);
-      this.get('S1_P3').pushObject(dragged);
-    },
-    S2_P1(dragged,target){
-      this.get('model').removeObject(dragged);
-      this.get('S2_P1').pushObject(dragged);
-    },
-    S2_P2(dragged,target){
-      this.get('model').removeObject(dragged);
-      this.get('S2_P2').pushObject(dragged);
-    },
-    S2_P3(dragged,target){
-      this.get('model').removeObject(dragged);
-      this.get('S2_P3').pushObject(dragged);
+    Drop(dragged, target){
+      //Ищем id контейнера, откуда перетащили объект:
+      var sourceContainerId = dragged.container;
+      if (sourceContainerId == null)
+      sourceContainerId = 'model'; 
+
+      //Удаляем объект из того контейнера:
+      this.get(sourceContainerId).removeObject(dragged);
+
+      //Добавляем объект вместе с id нового контейнера:
+      var targetContainerId = target.target.id;
+      dragged.container = targetContainerId;
+      this.get(target.target.id).pushObject(dragged);
     }
   }
 });
